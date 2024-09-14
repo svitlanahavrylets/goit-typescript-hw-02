@@ -1,0 +1,44 @@
+.header {
+  width: 100%;
+  padding: 12px 0;
+  background-color: rgb(9, 111, 158);
+}
+.divSearchForm {
+  display: block;
+  position: relative;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  width: 272px;
+}
+.divSearchForm:hover,
+.divSearchForm:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
+.input {
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 16px;
+  line-height: 150%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+}
+.searchBtn {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.searchbtn:hover,
+.searchbtn:active {
+  outline: none;
+}

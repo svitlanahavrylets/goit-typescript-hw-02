@@ -1,0 +1,17 @@
+.loadMoreBtn {
+  border-radius: 8px;
+  border: none;
+  padding: 8px 16px;
+  height: 40px;
+  background: rgb(9, 111, 158);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.loadMoreBtn:hover,
+.loadMoreBtn:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
