@@ -1,6 +1,12 @@
 import css from "./ImageCard.module.css";
+import { Image } from "../App/App.types";
+import { FC } from "react";
 
-const ImageCard = ({ image }) => {
+interface ImageItemProps {
+  image:Image
+}
+
+const ImageCard: FC<ImageItemProps> = ({ image }) => {
   return (
     <div className={css.divCard}>
       <img

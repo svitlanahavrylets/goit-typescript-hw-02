@@ -1,5 +1,11 @@
 import axios from "axios";
 
+interface ApiResponse {
+  results: [];
+  total: number;
+  total_pages: number;
+}
+
 const articlesApi = axios.create({
   baseURL: "https://api.unsplash.com/",
   params: {
@@ -7,10 +13,14 @@ const articlesApi = axios.create({
   },
 });
 
-export async function getImages(query, page) {
-  const { data } = await articlesApi.get(
+export async function getImages(
+  query: string,
+  page: number
+): Promise<ApiResponse> {
+  const { data } = await articlesApi.get<ApiResponse>(
     `search/photos/?query=${query}&page=${page}`
   );
+
   return data;
 }
 export default getImages;

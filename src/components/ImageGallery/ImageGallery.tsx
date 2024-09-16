@@ -1,10 +1,17 @@
+import { FC } from "react";
+import { Image } from "../App/App.types";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
-const ImageGallery = ({ images, openModal }) => {
+interface ImagesListProps {
+  images: Image[];
+  openModal: (image: Image) => void;
+}
+
+const ImageGallery: FC<ImagesListProps> = ({ images, openModal }) => {
   return (
     <ul className={css.list}>
-      {images.map((image) => (
+      {images.map((image: Image) => (
         <li key={image.id} onClick={() => openModal(image)}>
           <ImageCard image={image} />
         </li>
