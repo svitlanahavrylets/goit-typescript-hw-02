@@ -1,7 +1,8 @@
 import axios from "axios";
+import { Image } from "../components/App/App.types";
 
 interface ApiResponse {
-  results: [];
+  results: Image[];
   total: number;
   total_pages: number;
 }
